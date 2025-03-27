@@ -66,15 +66,9 @@ figure {
   }
 
   &__rating {
-    width: 80%;
     margin: 0 auto;
-    background: #eee;
     border-radius: 10px;
     overflow: hidden;
-
-    &__fill {
-      width: 100%;
-    }
   }
 
 }
