@@ -12,12 +12,11 @@ function render() {
         book.ratingBgc = determineRatingBgc(book.rating);
         book.ratingWidth = (book.rating / 10) * 100;
         // Generujemy HTML na podstawie szablonu i danych o książce
-        const generatedHTML = bookTemplate({
-            ...book,
+        const generatedHTML = bookTemplate(Object.assign({},book,{
             ratingWidth: book.ratingWidth,
             ratingBgc: book.ratingBgc,
             
-        });
+        }));
         console.log(generatedHTML);
         console.log(book.ratingWidth, book.ratingBgc);
         // Tworzymy element DOM z wygenerowanego HTML
